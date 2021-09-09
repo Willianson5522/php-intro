@@ -39,18 +39,29 @@ else if(!is_numeric($idade)){
 
 if ($idade >= 6 && $idade <= 12){
     for ($i = 0; $i <= count($categorias); $i++){
-        if ($categorias[$i] == 'infantil')
-            echo "O nadador " .$nome. " compete na categoria " .$categorias[$i];
+        if ($categorias[$i] == 'infantil'){
+            $_SESSION['mensagem-de-sucesso'] = "O nadador " .$nome. " compete na categoria " .$categorias[$i];
+            header('location: index.php');
+            return;
+        }            
     }
 }
 else if ($idade >= 13 && $idade <= 18){
     for ($i = 0; $i <= count($categorias); $i++){
-        if ($categorias[$i] == 'adolecente')
-            echo "O nadador ". $nome ." compete na categoria adolecente";
+        if ($categorias[$i] == 'adolecente'){
+            $_SESSION['mensagem-de-sucesso'] = "O nadador ". $nome ." compete na categoria adolecente";
+            header('location: index.php');
+            return;
+        }
     }
 }
 else 
 for ($i = 0; $i <= count($categorias); $i++){
-    if ($categorias[$i] == 'adulto')
-        echo "O nadador ". $nome ." compete na categoria adulto";
+    if ($categorias[$i] == 'adulto'){
+        if ($categorias[$i] == 'adulto'){
+            $_SESSION['mensagem-de-sucesso'] = "O nadador ". $nome ." compete na categoria adulto";
+            header('location: index.php');
+            return;
+        }
+    }     
 }
