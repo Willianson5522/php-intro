@@ -2,17 +2,17 @@
 
 function validaNome(string $nome) : bool{
     if(empty($nome)){
-        setarMensagemErro( mensagem: 'O nome não pode ser vazio, por favor preencha-o novamente');
+        setarMensagemErro('O nome não pode ser vazio, por favor preencha-o novamente');
         return false;
     }
     
     else if(strlen($nome) < 3){
-        setarMensagemErro( mensagem: 'O nome deve conter mais que 3 caracteres');        
+        setarMensagemErro('O nome deve conter mais que 3 caracteres');        
         return false;
     }
     
     else if(strlen($nome) > 30){
-        setarMensagemErro( mensagem: 'o nome é muito extenso');        
+        setarMensagemErro('O nome é muito extenso');        
         return false;
     }
     return true;
@@ -20,7 +20,7 @@ function validaNome(string $nome) : bool{
 
 function validaIdade(string $idade) : bool{
     if(!is_numeric($idade)){
-        setarMensagemErro( mensagem: 'Informe um número para idade');        
+        setarMensagemErro('Informe um número para idade');        
         return false;
     }
     return true;
