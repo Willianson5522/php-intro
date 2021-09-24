@@ -11,7 +11,7 @@ function validaNome(string $nome) : bool{
         return false;
     }
     
-    else if(strlen($nome) > 30){
+    else if(strlen($nome) > 30){    
         setarMensagemErro('O nome é muito extenso');        
         return false;
     }

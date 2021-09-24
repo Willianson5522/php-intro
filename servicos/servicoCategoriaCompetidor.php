@@ -42,3 +42,4 @@ function defineCategoriaCompetidor(string $nome, string $idade) : ?string{
         return obterMensagemErro();
     }
     }
+    
